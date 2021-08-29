@@ -3,6 +3,7 @@ const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Disc
 const fs = require("fs");
 
 const db = require("./db.json");
+const config = require("./config.json")
 
 let user;
 
@@ -59,4 +60,4 @@ client.on("messageCreate", (msg) => {
 })
 
 
-client.login("ODYyNDIyMzYxNzUxMTU4ODM0.YOYHag.g3cjsUVegj1fuKEwsw0uDvfcLnY")
+client.login(config.token)
